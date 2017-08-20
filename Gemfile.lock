@@ -1,0 +1,69 @@
+GIT
+  remote: git://github.com/nvreynolds/testrail-gemified.git
+  revision: c636440d447e3ec62c64d4ff91d8bf3d1b4564cf
+  specs:
+    testrail (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (5.0.1)
+      activesupport (= 5.0.1)
+    activerecord (5.0.1)
+      activemodel (= 5.0.1)
+      activesupport (= 5.0.1)
+      arel (~> 7.0)
+    activesupport (5.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (7.1.4)
+    coderay (1.1.1)
+    concurrent-ruby (1.0.4)
+    i18n (0.8.0)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
+    method_source (0.8.2)
+    mime-types (1.25.1)
+    minitest (5.10.1)
+    pg (0.18.4)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (1.6.5)
+    rack-protection (1.5.3)
+      rack
+    rb-readline (0.5.4)
+    rest-client (1.6.9)
+      mime-types (~> 1.16)
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-activerecord (2.0.11)
+      activerecord (>= 3.2)
+      sinatra (~> 1.0)
+    slop (3.6.0)
+    thread_safe (0.3.5)
+    tilt (2.0.6)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (~> 5.0.1)!
+  mail (~> 2.6.4)!
+  pg (~> 0.18.4)!
+  pry (~> 0.10.4)!
+  rb-readline!
+  rest-client (~> 1.6.9)!
+  sinatra (~> 1.4.8)!
+  sinatra-activerecord (~> 2.0.11)!
+  testrail!
+
+BUNDLED WITH
+   1.14.5
