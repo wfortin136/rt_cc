@@ -8,4 +8,6 @@ source 'https://rubygems.org' do
   gem 'pg', '~>0.18.4'
   gem 'mail', '~>2.6.4', :require => false
   gem 'testrail', :git => 'git://github.com/nvreynolds/testrail-gemified.git', :require => false
+  gem 'rack'
+#  gem 'dotenv'
 end

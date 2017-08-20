@@ -20,3 +20,9 @@
 ### [Pivotal login](https://www.pivotaltracker.com/signin):
 - user: `nate+test1@reviewtrackers.com`
 - pw: `Password1!`
+
+
+## Solution
+Requirements:
+Docker
+docker pull postgres
