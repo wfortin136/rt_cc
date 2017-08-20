@@ -9,6 +9,8 @@ require 'sinatra/activerecord'
 require './config/environments'
 require './models/owner'
 
+set :bind, '0.0.0.0'
+
 # On initial deploy, update db with pivotal
 init=true
 
