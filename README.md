@@ -26,3 +26,6 @@
 Requirements:
 Docker
 docker pull postgres
+docker volume create --name app-logs
+docker run -it --rm -e "xpack.monitoring.enabled=false" -v <rt_challenge_dir>>/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -v app-logs:/var/log/piv_app/ docker.elastic.co/logstash/logstash:5.5.1
+docker run -it --rm -p 4567:4567 -v app-logs:/var/log/piv_app/ --link rtdb:rtdb rt_cc

@@ -5,14 +5,15 @@ RUN apt-get install -y git-core
 #RUN apt-get install -y libpq-dev postgresql-9.4 postgresql-server-dev-9.4
 RUN gem install bundler
 
-ADD . /opt/piv_app
+# Setup logstash
+ADD logstash/logstash.conf /usr/share/logstash/pipeline/logstash.conf
+VOLUME /usr/share/logstash/pipeline
 
+# Setup App
 EXPOSE 4567
-
+ADD . /opt/piv_app
 RUN mkdir -p /var/log/piv_app
-
 WORKDIR /opt/piv_app
-
 RUN bundle install
 
 #ENTRYPOINT ["ruby","rtchallenge.rb"]
