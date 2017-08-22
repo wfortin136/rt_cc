@@ -38,3 +38,5 @@ build/
 
 # must be last
 !.gitkeep
+
+terraform/user_data/pivotal.ud
