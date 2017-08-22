@@ -89,5 +89,5 @@ docker logs -f <sha of logstash container>
 ```
 Then hit the public ip, and you should see access logs dump.
 
-I have used this repo to spin up a cluster running this exact configuration, which can be seen here: http://http://54.224.5.161
+I have used this repo to spin up a cluster running this exact configuration, which can be seen here: http://54.224.5.161
 
