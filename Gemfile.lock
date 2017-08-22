@@ -59,6 +59,7 @@ DEPENDENCIES
   mail (~> 2.6.4)!
   pg (~> 0.18.4)!
   pry (~> 0.10.4)!
+  rack!
   rb-readline!
   rest-client (~> 1.6.9)!
   sinatra (~> 1.4.8)!
@@ -66,4 +67,4 @@ DEPENDENCIES
   testrail!
 
 BUNDLED WITH
-   1.14.5
+   1.15.4

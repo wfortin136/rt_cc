@@ -1,3 +1,4 @@
+env.rb
 .env
 *.gem
 *.rbc
@@ -37,3 +38,5 @@ build/
 
 # must be last
 !.gitkeep
+
+terraform/user_data/pivotal.ud

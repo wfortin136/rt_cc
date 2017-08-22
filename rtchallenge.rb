@@ -1,4 +1,5 @@
 # bundle exec irb -I. -r rtchallenge.rb
+require './env' if File.exists?('env.rb')
 require 'sinatra'
 require 'json'
 require 'rest-client'
@@ -8,8 +9,18 @@ require 'sinatra/activerecord'
 require './config/environments'
 require './models/owner'
 
+set :bind, '0.0.0.0'
+
+# On initial deploy, update db with pivotal
+init=true
+
 get '/' do
   protected!
+  # Only call first time after a deploy
+  if init
+    init=false
+    update_current_iteration
+  end
   erb :home
 end
 
