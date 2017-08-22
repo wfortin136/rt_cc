@@ -1,0 +1,40 @@
+{
+  "containerDefinitions": [
+    {
+      "volumesFrom": [],
+      "memory": 400,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 4567,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "mountPoints": [],
+      "name": "piv-app",
+      "image": "wfortin136/rt_cc:latest",
+      "cpu": 0,
+      "privileged": true,
+      "command": ["bundle", "exec", "rackup", "config.ru", "-p", "4567", "-o", "0.0.0.0", "-E", "production"]
+    },
+    {
+      "memory": 400,
+      "essential": false,
+      "name": "piv-app-logstash",
+      "image": "docker.elastic.co/logstash/logstash:5.5.1",
+      "cpu": 0,
+      "environment": [
+        {"name": "XPACK_MONITORING_ENABLED", "value": "false"},
+        {"name": "path.config", "value": "/usr/share/logstash/pipeline/*"}
+      ],
+      "volumesFrom": [
+        {
+          "sourceContainer": "piv-app",
+          "readOnly": true
+        }
+      ]
+    }
+  ],
+  "family": "piv-app"
+}

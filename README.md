@@ -23,9 +23,11 @@
 
 
 ## Solution
-Requirements:
-Docker
-docker pull postgres
+# To run locally
+```docker pull postgres
+docker run -it --rm --name rtchallenge -e POSTGRES_PASSWORD=password1 -e POSTGRES_DB=rtchallenge -e POSTGRES_USER=user1 -p 5432:5432 -d postgres
 docker volume create --name app-logs
 docker run -it --rm -e "xpack.monitoring.enabled=false" -v <rt_challenge_dir>>/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -v app-logs:/var/log/piv_app/ docker.elastic.co/logstash/logstash:5.5.1
-docker run -it --rm -p 4567:4567 -v app-logs:/var/log/piv_app/ --link rtdb:rtdb rt_cc
+docker run -it --rm -p 4567:4567 -v app-logs:/var/log/piv_app/ --link rtdb:rtdb rt_cc```
+
+# To Deploy to Production
