@@ -9,6 +9,7 @@ ADD . /opt/piv_app
 
 EXPOSE 4567
 
+RUN mkdir -p /var/log/piv_app && touch /var/log/piv_app/access.log
 WORKDIR /opt/piv_app
 
 RUN bundle install
